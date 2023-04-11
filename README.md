@@ -2,8 +2,8 @@
 ## description
 source code for [RVFILES](https://files.therealvanyek.ml)  
   
-also, there isn't much files, and in fact, it's not a file hosting or anything like that. it's just my own polygon for design testing ;)  
-i just thought it would be nice to update source code here.
+there isn't much files, and in fact, it's not a file hosting or anything like that (maybe it will be though). it's just my own polygon for testing random things ;)  
+also, small notice: i will not update files which aren't a part of the source code
   
 ## todo
 1. create a mobile menu already you damn prick
