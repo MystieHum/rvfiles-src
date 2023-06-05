@@ -67,7 +67,7 @@ a:link, a:visited {
     color: white;
 }
 
-button {
+button, input[type="file"], input[type="submit"] {
     font-size: 18px;
     padding: 0.7em 1.4em;
     border: 1px solid transparent;
@@ -76,14 +76,14 @@ button {
     color: #ddd;
     background-color: #333;
     transition-duration: 0.1s;
-    margin: 10px;
+    /*margin: 10px;*/
     cursor: pointer;
 }
 
-button:hover {
+button:hover, input[type="file"]:hover, input[type="submit"]:hover {
     border-color: #555;
 }
-button:active {
+button:active, input[type="file"]:active, input[type="submit"]:active {
   background-color: #444;
 }
 
@@ -123,4 +123,6 @@ button:active {
   background: #333;
   border-radius: 6px;
   text-shadow: none;
+  width: max-content;
+  margin: 10px auto;
 }
