@@ -7,14 +7,59 @@
     <title>RVFILES • Главная</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/nav.css">
+	<link rel="stylesheet" href="css/mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#upload-form").submit(function(e){
+				e.preventDefault();
+				var formData = new FormData(this);
+				$.ajax({
+					url: "upload.php",
+					type: "POST",
+					data: formData,
+					processData: false,
+					contentType: false,
+					success: function(response){
+						$("#upload-response").html(response);
+					}
+				});
+			});
+		});
+	</script-->
 </head>
 <body id="home">
-    <script id="replace_with_navbar" src="https://4vanyek.github.io/rvfiles-src/js/nav.js"></script>
+	<nav class="navbar">
+   
+		<!-- NAVIGATION MENU -->
+		<ul class="nav-links">
+	
+		  <!-- USING CHECKBOX HACK -->
+		  <input type="checkbox" id="checkbox_toggle" />
+		  <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+	
+		  <!-- NAVIGATION MENUS -->
+		  <div class="menu">
+			<a href="/" class="internal_link link-active">Главная</a>
+			<a href="../about.html" class="internal_link">О сайте</a>
+			<a href="../example.html" class="internal_link">Example</a>
+			<a href="../games" class="internal_link">Игры</a>
+			<a href="../testing.html" class="internal_link">Testing</a>
+		  </div>
+		</ul>
+	  </nav>
     <h1 class="textcenter">Добро пожаловать на RVFILES!<br></h1>
-    <script id="replace_with_footer" src="https://4vanyek.github.io/rvfiles-src/js/nav.js"></script>
+    <!--form method="post" enctype="multipart/form-data">
+		<label for="file" style="color: #fff;">Выберите файл:</label>
+		<input type="file" name="file" id="file"><div id="upload-response" style="color: #fff;"></div>
+		<input type="submit" name="submit" value="Загрузить">
+	</form-->
+    <script id="replace_with_footer" src="js/footer.js"></script>
 </body>
 </html>

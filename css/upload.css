@@ -1,0 +1,20 @@
+h2 {
+	margin: 20px 0;
+}
+form {
+	max-width: 500px;
+	margin: 0 auto;
+	border-radius: 6px;
+}
+label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+input[type="file"] {
+	display: block;
+	font-size: 16px !important;
+	margin: 0;
+	border-radius: 6px;
+	cursor: default;
+}

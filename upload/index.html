@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="general.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<title>File Upload Form</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#upload-form").submit(function(e){
+				e.preventDefault();
+				var formData = new FormData(this);
+				$.ajax({
+					url: "upload.php",
+					type: "POST",
+					data: formData,
+					processData: false,
+					contentType: false,
+					success: function(response){
+						$("#upload-response").html(response);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<form id="upload-form" method="post" enctype="multipart/form-data">
+		<label for="file" style="color: #fff;">Выберите файл:</label>
+		<input type="file" name="file" id="file" style="color: #fff;"><div id="upload-response" style="color: #fff;"></div>
+		<input type="submit" name="submit" value="Upload File">
+	</form>
+</body>
+</html>
